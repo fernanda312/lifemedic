@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIFE MEDIC — Suplementos com base científica para uma vida mais saudável</title>
+<meta name="description" content="LIFE MEDIC, Maputo. Suplementos com base científica: magnésio, foco, sono, pele, energia, digestão e bem-estar.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1d1a33;background:#fff;line-height:1.5}
+a{color:#483a97;text-decoration:none}button{font:inherit;cursor:pointer}
+header{position:sticky;top:0;background:#fff;z-index:20;border-bottom:1px solid #ecebf4}
+.nav{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:30px;font-weight:900;letter-spacing:.06em;color:#483a97}
+nav{display:flex;gap:22px;flex-wrap:wrap}nav a{color:#1d1a33;font-weight:600}
+.cartbtn{background:#483a97;color:#fff;border:0;border-radius:999px;padding:10px 18px;font-weight:700;white-space:nowrap}
+.hero{background:#e9e0f2} .hero-in{max-width:1200px;margin:0 auto;padding:40px 20px;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.18em;font-weight:800;color:#483a97;text-transform:uppercase}
+h1{font-size:clamp(38px,6vw,68px);line-height:.95;margin:12px 0;text-transform:uppercase;font-weight:900}
+.hero p.lead{font-size:19px;max-width:520px} .hero img{width:100%;height:auto;object-fit:contain;border-radius:24px;background:#d8c8e0;display:block}
+.btn{display:inline-block;background:#483a97;color:#fff;padding:14px 24px;border-radius:999px;font-weight:800} .btn.ghost{background:#fff;color:#483a97;border:2px solid #483a97;margin-left:10px}
+.marquee{background:#483a97;color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.marquee span{display:inline-block;padding-right:24px;animation:scroll 28s linear infinite}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.wrap{max-width:1200px;margin:0 auto;padding:56px 20px} h2{font-size:clamp(28px,4vw,44px);line-height:1.05;margin:8px 0} .sub{color:#5a5570;font-size:18px;max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0} .chip{border:1.5px solid #d9d2ee;background:#fff;border-radius:999px;padding:9px 16px;font-weight:700} .chip.on{background:#483a97;color:#fff;border-color:#483a97}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{border:1px solid #ecebf4;border-radius:20px;padding:16px;background:#fff;display:flex;flex-direction:column}
+.card-img{background:#f7f5ff;border-radius:14px;padding:12px;height:270px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-img img,.card-img video{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.card h3{font-size:19px;margin:16px 0 6px} .card p{color:#5a5570;margin:0 0 12px;flex:1} .price{font-size:22px;font-weight:900;color:#483a97;margin-bottom:12px}
+.add{background:#483a97;color:#fff;border:0;border-radius:999px;padding:12px;width:100%;font-weight:800}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center} .benefits div{border-top:2px solid #b577e2;padding-top:16px} .benefits b{letter-spacing:.08em}
+.testi{display:grid;grid-template-columns:1fr 1fr;gap:20px} blockquote{margin:0;background:#f4f1fb;border-radius:20px;padding:24px} blockquote p{font-size:19px}
+.about{background:#f4f1fb;border-radius:24px;padding:36px} .buy{background:#483a97;color:#fff;border-radius:24px;padding:36px} .buy h2{color:#fff}
+footer{background:#1d1a33;color:#cfcbe8} footer .wrap{padding:40px 20px} footer a{color:#fff}
+.drawer{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:50} .drawer.open{display:block} .panel{position:absolute;right:0;top:0;bottom:0;width:min(430px,92vw);background:#fff;padding:22px;overflow:auto}
+.panel input{width:100%;padding:12px;border:1px solid #d9d2ee;border-radius:12px;margin:6px 0} .line{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #eee}
+.small{font-size:13px;color:#6b6685} .note{background:#fff8e6;border:1px solid #f0d9a0;border-radius:12px;padding:12px;margin-top:14px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.hero-in{grid-template-columns:1fr;padding:28px 16px} nav{display:none} .grid{grid-template-columns:repeat(2,1fr)} .card-img{height:220px} .testi,.benefits{grid-template-columns:1fr} .wrap{padding:40px 16px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr} .card-img{height:280px} .btn.ghost{margin-left:0;margin-top:10px}}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#">LIFE MEDIC</a><nav><a href="#produtos">Produtos</a><a href="#onde-comprar">Onde comprar</a><a href="#sobre">Sobre</a></nav><button class="cartbtn" onclick="openCart()">Carrinho (<span id="count">0</span>)</button></div></header>
+<section class="hero"><div class="hero-in"><div><div class="eyebrow">Suplementos com base científica para uma vida mais saudável</div><h1>Entra no hábito</h1><p class="lead">Tens um objetivo? Há um LIFE MEDIC para isso. Suplementos limpos e chiques, para energia, foco, sono, pele e bem-estar — em Maputo.</p><p><a class="btn" href="#produtos">Ver produtos</a><a class="btn ghost" href="#onde-comprar">Onde comprar</a></p></div><img src="images/hero-nutriplus.jpg" alt="Gama Nutriplus — imagem hero"></div></section>
+<div class="marquee"><span>Suplementos com base científica • Essenciais diários • Hábitos que valem a pena repetir • Suplementos com base científica • Essenciais diários • Hábitos que valem a pena repetir •&nbsp;</span></div>
+<section class="wrap" id="produtos"><div class="eyebrow">Os nossos produtos</div><h2>Encontra o teu próximo LIFE MEDIC</h2><p class="sub">Combina o teu bem-estar. Escolhe pelo objetivo, vê o nome, o detalhe e o preço de cada suplemento.</p>
+<div class="chips" id="chips">
+<button class="chip on" onclick="filter('all',this)">Todos</button><button class="chip" onclick="filter('energia',this)">Energia</button><button class="chip" onclick="filter('foco',this)">Foco</button><button class="chip" onclick="filter('sono',this)">Sono</button><button class="chip" onclick="filter('pele',this)">Pele e cabelo</button><button class="chip" onclick="filter('digestao',this)">Digestão</button><button class="chip" onclick="filter('imunidade',this)">Imunidade</button><button class="chip" onclick="filter('equilibrio',this)">Equilíbrio</button><button class="chip" onclick="filter('peso',this)">Peso</button><button class="chip" onclick="filter('memoria',this)">Memória</button><button class="chip" onclick="filter('recuperacao',this)">Recuperação</button>
+</div><div class="grid" id="grid"><article class="card" data-tags="energia imunidade bem-estar" data-id="nutriplus" data-name="Gama Nutriplus" data-price="2850">
+      <div class="card-img"><img src="images/hero-nutriplus.jpg" alt="Gama Nutriplus" loading="lazy"></div>
+      <h3>Gama Nutriplus</h3>
+      <p>Espirulina 210 g, Café de Chicória, Chocolate, Shot BSC e Ómega 3 — para energia, imunidade e bem-estar diário.</p>
+      <div class="price">2 850 MT</div>
+      <button class="add" onclick="addToCart('nutriplus')">Adicionar</button>
+    </article>
+<article class="card" data-tags="sono recuperacao" data-id="magnesio" data-name="Magnésio Mega Strength" data-price="1850">
+      <div class="card-img"><img src="images/magnesio.jpg" alt="Magnésio Mega Strength" loading="lazy"></div>
+      <h3>Magnésio Mega Strength</h3>
+      <p>Gomas de magnésio 354 mg, de absorção melhorada — para sono, músculos e calma.</p>
+      <div class="price">1 850 MT</div>
+      <button class="add" onclick="addToCart('magnesio')">Adicionar</button>
+    </article>
+<article class="card" data-tags="foco energia" data-id="focus" data-name="Focus+" data-price="2450">
+      <div class="card-img"><img src="images/focus.jpg" alt="Focus+" loading="lazy"></div>
+      <h3>Focus+</h3>
+      <p>Lima e ananás, 30 doses — para foco, energia e humor.</p>
+      <div class="price">2 450 MT</div>
+      <button class="add" onclick="addToCart('focus')">Adicionar</button>
+    </article>
+<article class="card" data-tags="sono imunidade" data-id="reishi" data-name="Reishi Mushroom Gummies" data-price="2150">
+      <div class="card-img"><img src="images/reishi.jpg" alt="Reishi Mushroom Gummies" loading="lazy"></div>
+      <h3>Reishi Mushroom Gummies</h3>
+      <p>Gomas de cogumelo Reishi, sabor maçã, 60 — para calma, sono e imunidade.</p>
+      <div class="price">2 150 MT</div>
+      <button class="add" onclick="addToCart('reishi')">Adicionar</button>
+    </article>
+<article class="card" data-tags="pele cabelo" data-id="feel-hair" data-name="Hair Support" data-price="2350">
+      <div class="card-img"><img src="images/feel-hair.jpg" alt="Hair Support" loading="lazy"></div>
+      <h3>Hair Support</h3>
+      <p>30 cápsulas — para cabelo, pele e unhas.</p>
+      <div class="price">2 350 MT</div>
+      <button class="add" onclick="addToCart('feel-hair')">Adicionar</button>
+    </article>
+<article class="card" data-tags="bem-estar recuperacao" data-id="ancient-omegas" data-name="Ancient Omegas Whole Body" data-price="2650">
+      <div class="card-img"><img src="images/ancient-omegas.jpg" alt="Ancient Omegas Whole Body" loading="lazy"></div>
+      <h3>Ancient Omegas Whole Body</h3>
+      <p>1000 mg de ómega 3 — para coração, cérebro e articulações.</p>
+      <div class="price">2 650 MT</div>
+      <button class="add" onclick="addToCart('ancient-omegas')">Adicionar</button>
+    </article>
+<article class="card" data-tags="energia recuperacao" data-id="nad" data-name="NAD+ Advanced" data-price="3450">
+      <div class="card-img"><img src="images/nad.jpg" alt="NAD+ Advanced" loading="lazy"></div>
+      <h3>NAD+ Advanced</h3>
+      <p>600 mg, 60 cápsulas — para energia celular e longevidade.</p>
+      <div class="price">3 450 MT</div>
+      <button class="add" onclick="addToCart('nad')">Adicionar</button>
+    </article>
+<article class="card" data-tags="pele equilibrio energia" data-id="golly" data-name="Pack Golly" data-price="2450">
+      <div class="card-img"><img src="images/golly.jpg" alt="Pack Golly" loading="lazy"></div>
+      <h3>Pack Golly</h3>
+      <p>Colagénio, Moody e Energia — para firmeza, equilíbrio e energia natural.</p>
+      <div class="price">2 450 MT</div>
+      <button class="add" onclick="addToCart('golly')">Adicionar</button>
+    </article>
+<article class="card" data-tags="bem-estar imunidade" data-id="multivitaminas" data-name="Multivitaminas — Pack Diário" data-price="1450">
+      <div class="card-img"><img src="images/multivitaminas.jpg" alt="Multivitaminas — Pack Diário" loading="lazy"></div>
+      <h3>Multivitaminas — Pack Diário</h3>
+      <p>Vitamina E, Vitamina D3 e multivitamínico — para o bem-estar geral, todos os dias.</p>
+      <div class="price">1 450 MT</div>
+      <button class="add" onclick="addToCart('multivitaminas')">Adicionar</button>
+    </article>
+<article class="card" data-tags="bem-estar equilibrio" data-id="mama-bear" data-name="Mama Bear" data-price="2350">
+      <div class="card-img"><img src="images/mama-bear.jpg" alt="Mama Bear" loading="lazy"></div>
+      <h3>Mama Bear</h3>
+      <p>Gomas pré-natais com ómega 3 e multivitamínico — para mamãs e bebés.</p>
+      <div class="price">2 350 MT</div>
+      <button class="add" onclick="addToCart('mama-bear')">Adicionar</button>
+    </article>
+<article class="card" data-tags="pele" data-id="glutathione" data-name="Glutathione Gummies" data-price="2850">
+      <div class="card-img"><img src="images/glutathione.jpg" alt="Glutathione Gummies" loading="lazy"></div>
+      <h3>Glutathione Gummies</h3>
+      <p>Gomas antioxidantes — para uma pele mais luminosa.</p>
+      <div class="price">2 850 MT</div>
+      <button class="add" onclick="addToCart('glutathione')">Adicionar</button>
+    </article>
+<article class="card" data-tags="peso" data-id="trim" data-name="Trim Gummy" data-price="2150">
+      <div class="card-img"><img src="images/trim.jpg" alt="Trim Gummy" loading="lazy"></div>
+      <h3>Trim Gummy</h3>
+      <p>Gomas sabor maçã — para controlo de peso, como parte de uma rotina saudável.</p>
+      <div class="price">2 150 MT</div>
+      <button class="add" onclick="addToCart('trim')">Adicionar</button>
+    </article>
+<article class="card" data-tags="bem-estar equilibrio" data-id="essicare" data-name="Essicare" data-price="2150">
+      <div class="card-img"><img src="images/essicare.jpg" alt="Essicare" loading="lazy"></div>
+      <h3>Essicare</h3>
+      <p>Para cuidado e equilíbrio no dia a dia.</p>
+      <div class="price">2 150 MT</div>
+      <button class="add" onclick="addToCart('essicare')">Adicionar</button>
+    </article>
+<article class="card" data-tags="equilibrio" data-id="her-balance" data-name="Her Balance" data-price="2150">
+      <div class="card-img"><img src="images/her-balance.jpg" alt="Her Balance" loading="lazy"></div>
+      <h3>Her Balance</h3>
+      <p>Para o equilíbrio feminino — humor, ciclo e bem-estar.</p>
+      <div class="price">2 150 MT</div>
+      <button class="add" onclick="addToCart('her-balance')">Adicionar</button>
+    </article>
+<article class="card" data-tags="energia imunidade digestao" data-id="ag1" data-name="AG1 — Verde Diário" data-price="3850">
+      <div class="card-img"><img src="images/ag1.jpg" alt="AG1 — Verde Diário" loading="lazy"></div>
+      <h3>AG1 — Verde Diário</h3>
+      <p>Bebida verde diária com vitaminas C e B12 — para energia e metabolismo.</p>
+      <div class="price">3 850 MT</div>
+      <button class="add" onclick="addToCart('ag1')">Adicionar</button>
+    </article>
+<article class="card" data-tags="pele bem-estar" data-id="candii" data-name="Pack Candii" data-price="2650">
+      <div class="card-img"><img src="images/candii.jpg" alt="Pack Candii" loading="lazy"></div>
+      <h3>Pack Candii</h3>
+      <p>Glow, Chill e Color, 60 gomas cada — para brilho, calma e cor.</p>
+      <div class="price">2 650 MT</div>
+      <button class="add" onclick="addToCart('candii')">Adicionar</button>
+    </article>
+<article class="card" data-tags="energia recuperacao" data-id="mitopure" data-name="Mitopure" data-price="3650">
+      <div class="card-img"><img src="images/mitopure.jpg" alt="Mitopure" loading="lazy"></div>
+      <h3>Mitopure</h3>
+      <p>500 mg, 60 softgels — para energia mitocondrial e revitalização.</p>
+      <div class="price">3 650 MT</div>
+      <button class="add" onclick="addToCart('mitopure')">Adicionar</button>
+    </article>
+<article class="card" data-tags="pele" data-id="vida-glow" data-name="Radiance Advanced Repair" data-price="2850">
+      <div class="card-img"><img src="images/vida-glow.jpg" alt="Radiance Advanced Repair" loading="lazy"></div>
+      <h3>Radiance Advanced Repair</h3>
+      <p>30 cápsulas — para a saúde da pele e um brilho mais radiante.</p>
+      <div class="price">2 850 MT</div>
+      <button class="add" onclick="addToCart('vida-glow')">Adicionar</button>
+    </article>
+<article class="card" data-tags="recuperacao" data-id="bpc157" data-name="BPC-157" data-price="2950">
+      <div class="card-img"><img src="images/bpc157.jpg" alt="BPC-157" loading="lazy"></div>
+      <h3>BPC-157</h3>
+      <p>60 cápsulas — para recuperação e bem-estar.</p>
+      <div class="price">2 950 MT</div>
+      <button class="add" onclick="addToCart('bpc157')">Adicionar</button>
+    </article>
+<article class="card" data-tags="sono" data-id="lune" data-name="Lune Melatonin 10 mg" data-price="1950">
+      <div class="card-img"><img src="images/lune.jpg" alt="Lune Melatonin 10 mg" loading="lazy"></div>
+      <h3>Lune Melatonin 10 mg</h3>
+      <p>60 gomas de melatonina — para um sono mais profundo.</p>
+      <div class="price">1 950 MT</div>
+      <button class="add" onclick="addToCart('lune')">Adicionar</button>
+    </article>
+<article class="card" data-tags="equilibrio digestao" data-id="chill-pill" data-name="Chill Pill" data-price="2150">
+      <div class="card-img"><img src="images/chill-pill.jpg" alt="Chill Pill" loading="lazy"></div>
+      <h3>Chill Pill</h3>
+      <p>60 cápsulas vegetais — para humor, digestão e alívio do stress.</p>
+      <div class="price">2 150 MT</div>
+      <button class="add" onclick="addToCart('chill-pill')">Adicionar</button>
+    </article>
+<article class="card" data-tags="digestao imunidade" data-id="goli" data-name="Goli Probiotics" data-price="2350">
+      <div class="card-img"><img src="images/goli.jpg" alt="Goli Probiotics" loading="lazy"></div>
+      <h3>Goli Probiotics</h3>
+      <p>Pré + pós + probióticos, 60 gomas — para saúde digestiva e imunidade.</p>
+      <div class="price">2 350 MT</div>
+      <button class="add" onclick="addToCart('goli')">Adicionar</button>
+    </article>
+<article class="card" data-tags="memoria foco" data-id="meno" data-name="Brain Health + Memory" data-price="2650">
+      <div class="card-img"><img src="images/meno.jpg" alt="Brain Health + Memory" loading="lazy"></div>
+      <h3>Brain Health + Memory</h3>
+      <p>60 cápsulas veganas, para mulheres 40+ — para memória e saúde cerebral.</p>
+      <div class="price">2 650 MT</div>
+      <button class="add" onclick="addToCart('meno')">Adicionar</button>
+    </article>
+<article class="card" data-tags="energia recuperacao" data-id="anea" data-name="Proteína de Clara de Ovo" data-price="2450">
+      <div class="card-img"><video src="images/anea.mp4" autoplay muted loop playsinline aria-label="Proteína de Clara de Ovo"></video></div>
+      <h3>Proteína de Clara de Ovo</h3>
+      <p>Proteína limpa, em vídeo — para treino, recuperação e massa muscular.</p>
+      <div class="price">2 450 MT</div>
+      <button class="add" onclick="addToCart('anea')">Adicionar</button>
+    </article>
+</div>
+<p class="small">Preços em meticais, para Maputo. As fotos mostram o produto inteiro, sem cortes.</p></section>
+<section class="wrap"><div class="benefits"><div><b>Ingredientes com base científica</b><p>Fórmulas pensadas para uma rotina diária.</p></div><div><b>Qualidade testada</b><p>Produtos de marcas com controlo de qualidade.</p></div><div><b>Sem corantes artificiais</b><p>Uma escolha limpa para o dia a dia.</p></div></div></section>
+<section class="wrap"><div class="eyebrow">Pessoas reais, hábitos reais</div><h2>Quem já criou o hábito</h2><div class="testi">
+<blockquote><p>“Senti logo diferença no humor depois de alguns dias. Funcionam muito bem!”</p><b>— Amber</b><p class="small">Sobre Her Balance</p></blockquote>
+<blockquote><p>“Fiquei muito satisfeita com o alívio que senti e com o impulso no humor.”</p><b>— Roselyn</b><p class="small">Sobre Her Balance</p></blockquote>
+<blockquote><p>“Tenho mais energia ao longo do dia, sinto-me menos inchada e o humor está muito melhor.”</p><b>— Marium</b><p class="small">Sobre AG1</p></blockquote>
+<blockquote><p>“A minha pele parece muito mais saudável e luminosa. São cápsulas de que precisava!”</p><b>— Allie</b><p class="small">Sobre Radiance / Vida Glow</p></blockquote>
+</div></section>
+<section class="wrap" id="sobre"><div class="about"><div class="eyebrow">Sobre a LIFE MEDIC</div><h2>Atreve-te a repetir.</h2><p>Uma coisa leva a outra — e a repetição é a chave de qualquer hábito. A LIFE MEDIC existe para ajudar a criar, e a manter, hábitos saudáveis: um suplemento por dia, uma rotina simples, um bem-estar que se nota.</p></div></section>
+<section class="wrap" id="onde-comprar"><div class="buy"><h2>Onde comprar</h2><p>Maputo, Moçambique. Adiciona ao carrinho, copia o resumo da encomenda e envia-o no chat da loja para confirmar. Entrega em Maputo e levantamento a combinar.</p></div></section>
+<footer><div class="wrap"><b style="color:#fff;font-size:24px">LIFE MEDIC</b><p>Maputo, Moçambique • Suplementos para uma vida mais saudável</p><p class="small">Ler sempre o rótulo. Usar só como indicado. Vitaminas e minerais não substituem uma alimentação equilibrada. Se os sintomas persistirem, consultar um profissional de saúde. Os resultados podem variar de pessoa para pessoa.</p><p class="small">© 2026 LIFE MEDIC. Todos os direitos reservados.</p></div></footer>
+<div class="drawer" id="drawer"><div class="panel"><h2>Carrinho</h2><div id="items"></div><p><b>Total: <span id="total">0 MT</span></b></p><label>Nome</label><input id="nome" placeholder="O teu nome"><label>WhatsApp</label><input id="zap" placeholder="O teu número de WhatsApp"><button class="add" onclick="copyOrder()">Copiar resumo da encomenda</button><p id="copied" class="small"></p><div class="note">Envia o resumo copiado no chat da loja para confirmar a encomenda.</div><p><button onclick="closeCart()">Fechar</button></p></div></div>
+<script>
+let cart={};
+function fmt(n){return n.toLocaleString('pt-PT')+' MT'}
+function addToCart(id){cart[id]=(cart[id]||0)+1;render();openCart();}
+function render(){let c=0,t=0,html='';for(const id in cart){const el=document.querySelector('[data-id="'+id+'"]');const name=el.dataset.name,price=+el.dataset.price;c+=cart[id];t+=cart[id]*price;html+='<div class="line"><span>'+name+' × '+cart[id]+'</span><b>'+fmt(cart[id]*price)+'</b></div>';}document.getElementById('count').textContent=c;document.getElementById('total').textContent=fmt(t);document.getElementById('items').innerHTML=html||'<p class="small">O carrinho está vazio.</p>';window._total=t;}
+function openCart(){render();document.getElementById('drawer').classList.add('open');}function closeCart(){document.getElementById('drawer').classList.remove('open');}
+function filter(tag,btn){document.querySelectorAll('.chip').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.card').forEach(c=>{c.style.display=(tag==='all'||c.dataset.tags.includes(tag))?'flex':'none';});}
+function copyOrder(){let lines=['Encomenda LIFE MEDIC — Maputo'];for(const id in cart){const el=document.querySelector('[data-id="'+id+'"]');lines.push('- '+el.dataset.name+' × '+cart[id]+' = '+fmt(cart[id]*el.dataset.price));}lines.push('Total: '+fmt(window._total||0));lines.push('Nome: '+(document.getElementById('nome').value||''));lines.push('WhatsApp: '+(document.getElementById('zap').value||''));const txt=lines.join('\n');navigator.clipboard.writeText(txt).then(()=>{document.getElementById('copied').textContent='Resumo copiado. Envia-o no chat da loja para confirmar.';});}
+render();
+</script></body></html>
